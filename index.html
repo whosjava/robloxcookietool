@@ -10,12 +10,28 @@
     <div class="container">
         <div class="header">
             <h1>🍪 Roblox Cookie Finder</h1>
-            <p>Paste any text and we'll find the Roblox cookie automatically</p>
+            <p>Paste text or drag & drop files to find Roblox cookies</p>
         </div>
 
         <div class="input-section">
-            <textarea id="inputText" placeholder="Paste your text here...&#10;&#10;Example:&#10;some random text&#10;_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_ABC123DEF456...&#10;more random text"></textarea>
-            <button id="clearBtn" class="clear-btn">Clear</button>
+            <div id="dropZone" class="drop-zone">
+                <div class="drop-zone-content">
+                    <div class="drop-icon">📁</div>
+                    <p class="drop-text">Drag & Drop files here</p>
+                    <p class="drop-subtext">or click to browse</p>
+                    <input type="file" id="fileInput" accept=".txt,.log,.json" multiple hidden>
+                </div>
+            </div>
+            
+            <div class="separator">
+                <span>OR</span>
+            </div>
+
+            <textarea id="inputText" placeholder="Paste your text here...
+
+Example:
+_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_ABC123..."></textarea>
+            <button id="clearBtn" class="clear-btn">Clear All</button>
         </div>
 
         <div id="result" class="result hidden">
@@ -33,14 +49,26 @@
             </div>
         </div>
 
+        <div id="multipleResult" class="multiple-result hidden">
+            <div class="result-header">
+                <span class="status-badge multi">🎉 Multiple Cookies Found!</span>
+            </div>
+            <div id="cookiesList" class="cookies-list"></div>
+        </div>
+
         <div id="noCookie" class="no-cookie hidden">
             <div class="no-cookie-icon">❌</div>
             <h3>No Roblox Cookie Found</h3>
-            <p>Paste text containing a valid Roblox security cookie</p>
+            <p>Paste text or drop files containing valid Roblox security cookies</p>
+            <div class="example-box">
+                <strong>Valid cookie format:</strong>
+                <code>_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_[LONG_STRING]</code>
+            </div>
         </div>
 
         <div class="footer">
-            <p>Cookie Format: <code>_|WARNING:-DO-NOT-SHARE-THIS...</code></p>
+            <p>Supported formats: Text, .txt, .log, .json files</p>
+            <p>Cookie pattern: <code>_|WARNING:-DO-NOT-SHARE-THIS...</code></p>
         </div>
     </div>
 
