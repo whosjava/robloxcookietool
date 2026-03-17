@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+.input-section {
+    padding: 30px;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.clear-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.clear-btn:hover {
+    background: #e84118;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+.result {
+    margin: 0 30px 30px 30px;
+    padding: 25px;
+    background: #f0fff4;
+    border: 2px solid #48bb78;
+    border-radius: 15px;
+    animation: slideIn 0.4s ease-out;
+}
+
+.result-header {
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    background: #48bb78;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.cookie-display {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cookie-label {
+    font-weight: 600;
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.cookie-value {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+    border-left: 4px solid #667eea;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.copy-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.copy-btn:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.copy-btn:active {
+    transform: translateY(0);
+}
+
+.info-box {
+    background: #fff5f5;
+    border-left: 4px solid #fc8181;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.info-box strong {
+    color: #c53030;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: #742a2a;
+    font-size: 14px;
+}
+
+.no-cookie {
+    text-align: center;
+    padding: 50px 30px;
+    color: #718096;
+}
+
+.no-cookie-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.no-cookie h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: #f7fafc;
+    padding: 20px 30px;
+    text-align: center;
+    color: #718096;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer code {
+    background: #edf2f7;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+    
+    .container {
+        border-radius: 0;
+    }
+    
+    textarea {
+        min-height: 200px;
+    }
+    
+    .clear-btn {
+        position: static;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
