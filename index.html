@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Cookie Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍪 Roblox Cookie Finder</h1>
+            <p>Paste any text and we'll find the Roblox cookie automatically</p>
+        </div>
+
+        <div class="input-section">
+            <textarea id="inputText" placeholder="Paste your text here...&#10;&#10;Example:&#10;some random text&#10;_|WARNING:-DO-NOT-SHARE-THIS.--Sharing-this-will-allow-someone-to-log-in-as-you-and-to-steal-your-ROBUX-and-items.|_ABC123DEF456...&#10;more random text"></textarea>
+            <button id="clearBtn" class="clear-btn">Clear</button>
+        </div>
+
+        <div id="result" class="result hidden">
+            <div class="result-header">
+                <span class="status-badge">✅ Cookie Found!</span>
+            </div>
+            <div class="cookie-display">
+                <div class="cookie-label">🍪 Roblox Cookie:</div>
+                <div id="cookieValue" class="cookie-value"></div>
+                <button id="copyBtn" class="copy-btn">📋 Copy Cookie</button>
+            </div>
+            <div class="info-box">
+                <strong>⚠️ Security Warning:</strong>
+                <p>This cookie grants full access to the Roblox account. Never share it with anyone.</p>
+            </div>
+        </div>
+
+        <div id="noCookie" class="no-cookie hidden">
+            <div class="no-cookie-icon">❌</div>
+            <h3>No Roblox Cookie Found</h3>
+            <p>Paste text containing a valid Roblox security cookie</p>
+        </div>
+
+        <div class="footer">
+            <p>Cookie Format: <code>_|WARNING:-DO-NOT-SHARE-THIS...</code></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
